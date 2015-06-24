@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--distribution jessie \
+	--binary-images	iso-hybrid \
+	--mirror-bootstrap http://10.45.16.6:3142/debian/ \
+	--parent-mirror-bootstrap http://10.45.16.6:3142/debian/ \
+            --parent-mirror-chroot http://10.45.16.6:3142/debian/ \
+            --parent-mirror-chroot-security http://10.45.16.6:3142/debian/ \
+            #--parent-mirror-chroot-updates http://10.45.16.6:3142/debian/ \
+            #--parent-mirror-chroot-backports 
+        --parent-mirror-binary http://10.45.16.6:3142/debian/ \
+        --parent-mirror-binary-security http://10.45.16.6:3142/debian/ \
+            #--parent-mirror-binary-updates URL
+            #--parent-mirror-binary-backports URL
+            --parent-mirror-debian-installer 
+            --mirror-bootstrap http://10.45.16.6:3142/debian/ \
+            --mirror-chroot http://10.45.16.6:3142/debian/ \
+            --mirror-chroot-security http://10.45.16.6:3142/debian/ \
+            #--mirror-chroot-updates URL]
+            #--mirror-chroot-backports URL]
+            --mirror-binary http://10.45.16.6:3142/debian/ \
+            --mirror-binary-security http://10.45.16.6:3142/debian/ \
+            #--mirror-binary-updates URL]
+            #--mirror-binary-backports URL]
+            --mirror-debian-installer http://10.45.16.6:3142/debian/ \
+	--
+	"${@}"
