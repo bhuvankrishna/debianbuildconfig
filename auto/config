@@ -15,7 +15,7 @@ lb config noauto \
         --parent-mirror-binary-security http://10.45.16.6:3142/debian/ \
             #--parent-mirror-binary-updates URL
             #--parent-mirror-binary-backports URL
-            --parent-mirror-debian-installer 
+            --parent-mirror-debian-installer \
             --mirror-bootstrap http://10.45.16.6:3142/debian/ \
             --mirror-chroot http://10.45.16.6:3142/debian/ \
             --mirror-chroot-security http://10.45.16.6:3142/debian/ \
