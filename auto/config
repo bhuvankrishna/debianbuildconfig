@@ -7,16 +7,18 @@ lb config noauto \
 	--binary-images	iso-hybrid \
 	--mirror-bootstrap http://10.45.16.6:3142/debian/ \
 	--parent-mirror-bootstrap http://10.45.16.6:3142/debian/ \
-            --parent-mirror-chroot http://10.45.16.6:3142/debian/ \
-            --parent-mirror-chroot-security http://10.45.16.6:3142/debian/ \
+        --parent-mirror-chroot http://10.45.16.6:3142/debian/ \
+        --parent-mirror-chroot-security http://10.45.16.6:3142/debian/ \
         --parent-mirror-binary http://10.45.16.6:3142/debian/ \
-        --parent-mirror-binary-security http://10.45.16.6:3142/debian/ \
-            --parent-mirror-debian-installer http://10.45.16.6:3142/debian/ \
-            --mirror-bootstrap http://10.45.16.6:3142/debian/ \
-            --mirror-chroot http://10.45.16.6:3142/debian/ \
-            --mirror-chroot-security http://10.45.16.6:3142/debian/ \
-            --mirror-binary http://10.45.16.6:3142/debian/ \
-            --mirror-binary-security http://10.45.16.6:3142/debian/ \
-            --mirror-debian-installer http://10.45.16.6:3142/debian/ \
-	--
+	--parent-mirror-binary-security http://10.45.16.6:3142/debian/ \
+        --parent-mirror-debian-installer http://10.45.16.6:3142/debian/ \
+        --mirror-bootstrap http://10.45.16.6:3142/debian/ \
+        --mirror-chroot http://10.45.16.6:3142/debian/ \
+	--mirror-chroot-security http://10.45.16.6:3142/debian/ \
+        --mirror-binary http://10.45.16.6:3142/debian/ \
+	--mirror-binary-security http://10.45.16.6:3142/debian/ \
+        --mirror-debian-installer http://10.45.16.6:3142/debian/ \
+	--debconf-frontend interactive \
+	--interactive true \
+	#--linux-packages 'gimp task-gnome-desktop' \
 	"${@}"
